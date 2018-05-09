@@ -1,12 +1,8 @@
-const ce = React.createElement;
+import React from 'react';
+import { render } from 'react-dom';
+import MyTitle from './MyTitle';
 
-const MyTitle = function(props) {
-  return ce(
-    'div',
-    null,
-    ce('h1', { style: { color: props.color } }, props.title)
-  );
-};
+const ce = React.createElement;
 
 const MyFirstComponent = function() {
   return ce(
@@ -18,4 +14,4 @@ const MyFirstComponent = function() {
   );
 };
 
-ReactDOM.render(ce(MyFirstComponent), document.getElementById('app'));
+render(ce(MyFirstComponent), document.getElementById('app'));
